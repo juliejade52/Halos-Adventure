@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb;
     public int JumpForce;
+    public Transform groundPoint;
+    public LayerMask groundLayer;
+    public bool grounded;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +18,20 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+       grounded = Physics2D.OverlapPoint(groundPoint.position,groundLayer); 
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("Jump");
             rb.AddForce(Vector2.up * JumpForce);
         }
+
+        anim.SetFloat("yVelocity",rb.velocity.y);
+        anim.SetBool("Grounded", grounded);
     }
 }
