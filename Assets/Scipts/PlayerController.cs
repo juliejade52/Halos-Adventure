@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundPoint;
     public LayerMask groundLayer;
     public bool grounded;
+    public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
-
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
