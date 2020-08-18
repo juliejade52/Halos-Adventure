@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &84887479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84887480}
+  m_Layer: 0
+  m_Name: Coin Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84887480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84887479}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.7959378, y: 1.8735443, z: 0}
+  m_LocalScale: {x: 1.7022146, y: 1.5612872, z: 0.5244949}
+  m_Children: []
+  m_Father: {fileID: 3341175631226622676}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2132294575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132294576}
+  m_Layer: 0
+  m_Name: Coin left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132294576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132294575}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.719442, y: 2.0296733, z: -7.1319013}
+  m_LocalScale: {x: 1.7022146, y: 1.5612872, z: 0.5244949}
+  m_Children: []
+  m_Father: {fileID: 3341175631226622676}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3341175631203364022
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +121,8 @@ Transform:
   m_LocalScale: {x: 0.58747, y: 0.6404972, z: 1.9065963}
   m_Children:
   - {fileID: 3341175631203364023}
+  - {fileID: 2132294576}
+  - {fileID: 84887480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -158,3 +220,8 @@ MonoBehaviour:
   - {fileID: 0}
   endPosition: {fileID: 0}
   moveVel: 5
+  coinSpawnPositions:
+  - {fileID: 2132294576}
+  - {fileID: 84887480}
+  coinPrefab: {fileID: 7976677005700401305, guid: 5c80412576d4b0240aca638ebdbf232f,
+    type: 3}
