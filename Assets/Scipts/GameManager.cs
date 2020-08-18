@@ -15,14 +15,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score.text = currentScore + "";
+        instance = this;
     }
 
     public void AddScore()
     {
-        score.text = currentScore + "";
+        currentScore++;
     }
-
 
     // Update is called once per frame
     void Update()
