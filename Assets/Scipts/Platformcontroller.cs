@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Platformcontroller : MonoBehaviour
 {
+    public Transform[] spawnPositions;
     public Transform endPosition;
 
     public int moveVel = 5;
@@ -38,7 +39,7 @@ public class Platformcontroller : MonoBehaviour
             }
 
             Destroy(spawnedHazard);
-            startPosition = GameManager.instance[Random.Range(0, GameManager.instance.Length)];
+            startPosition = spawnPositions[Random.Range(0, spawnPositions.Length)];
             transform.position = startPosition.position;
 
             int coin = Random.Range(0, 3);
@@ -58,7 +59,7 @@ public class Platformcontroller : MonoBehaviour
 
             if (chances > 0)
             {
-                spawnedHazard = Instantiate(hazardPrefab, new Vector3(objectSpawnPositions[staticHazard].position.x, objectSpawnPositions[staticHazard].position.y - 0f, objectSpawnPositions[staticHazard].position.z), Quaternion.identity, transform);
+                spawnedHazard = Instantiate(hazardPrefab, new Vector3(objectSpawnPositions[staticHazard].position.x, objectSpawnPositions[staticHazard].position.y - 0, objectSpawnPositions[staticHazard].position.z), Quaternion.identity, transform);
             }
 
         }
