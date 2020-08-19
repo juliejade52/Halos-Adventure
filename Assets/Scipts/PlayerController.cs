@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
+        GameManager.instance.cam.followPlayer = false;
         Instantiate(deathEffect, effectPosition.position, Quaternion.identity);
         gameOver.SetActive(true);
         Destroy(gameObject);

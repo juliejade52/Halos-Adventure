@@ -8,14 +8,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public Transform[] spawnPositions;
+
     public int currentScore = 0;
 
     public Text score;
+
+    public CameraController cam;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        cam = Camera.main.GetComponent<CameraController>();
     }
 
     public void AddScore()
